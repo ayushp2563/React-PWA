@@ -86,7 +86,6 @@ import { AiOutlineUser } from "react-icons/ai";
 import { FiMessageSquare, FiFolder } from "react-icons/fi";
 import { FiLogOut } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { logOut } from "../../firebase";
 import { logout as logoutReducer } from "../../store/authReducer";
 import { useDispatch } from "react-redux";
@@ -95,7 +94,7 @@ import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { user } = useSelector((state) => state.auth);
+  //const { user } = useSelector((state) => state.auth);
 
   const handleLogout = async () => {
     await logOut();
@@ -128,7 +127,6 @@ const Sidebar = () => {
           open ? "w-52" : "w-16"
         } duration-500 text-gray-800 px-4`}
       >
-        {user.email}
         <div className="py-3 flex justify-end">
           <HiMenuAlt3
             size={26}
