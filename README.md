@@ -23,7 +23,7 @@ cd React-PWA
 3. Install the dependencies:
 
 ```sh
-npm run dev
+npm install
 ```
 
 ###  Running React-PWA
@@ -31,5 +31,5 @@ npm run dev
 Use the following command to run React-PWA:
 
 ```sh
-node app.js
+npm run dev
 ```
